@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <title>js-jq-carousel</title>
+    </head>
+    <body>
+
+        <div id="root">
+            <div class="container">
+
+                <div class="logo">
+                    <img src="img/logobol.png" alt="#">
+                </div>
+
+                <div class="new-todo">
+                    <input v-model="userNewTodo" @keyup.enter="addNewTodo" class="text-input" type="text" placeholder="Nuovo To Do">
+                    <button class="btn" @click="addNewTodo">Aggiungi</button>
+                </div>
+
+                <div class="todo-container">
+                    <ul class="todo-list">
+                        <li v-for="( todo, index ) in todos">
+                            {{ todo }}
+                            <span class="delete" @click="deleteToDo">
+                                <i class="fas fa-times"></i>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
